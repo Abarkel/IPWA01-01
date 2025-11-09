@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Seite füllt Bildschirmhöhe */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Abstand zwischen Logo und Titel */
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-bottom: 2px solid #ac0e0e;
+}
+
+.logo {
+  font-size: 2.8rem; /* Größe des Emoji-Logos */
+}
+
+footer {
+  border-bottom: 2px solid #ac0e0e;
+  background-color: #ddd;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-top: 2px solid #ac0e0e;
+  margin-top: auto; /* sorgt, dass Footer ans Ende gedrückt wird */
+}
+/* --- Bestätigungsseite --- */
+main h3 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+main {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  border: 2px solid #ac0e0e;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Standard-Layout (für große Bildschirme) */
+nav.navbar {
+  border-bottom: 2px solid #ac0e0e !important;
+}
+/* Bootstrap überschreiben */
+.nav-link {
+  color: #333 !important;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: blue !important;
+}
+
+/* Hamburger-Button Styling */
+.navbar-toggler {
+  border: none;
+  background-color: #f0f0f0;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Responsives Verhalten für kleine Bildschirme */
+@media Screen and (max-width: 767px) {
+  nav {
+    /*flex-direction: column;*/
+    align-items: center;
+  }
+  .navbar-nav {
+    /* flex-direction: column !important;*/
+    background-color: #e0e0e0;
+    padding: 1rem 0;
+  }
+  header,
+  nav,
+  main,
+  footer {
+    padding: 0.5rem;
+  }
+  .logo {
+    font-size: 1.5rem; /* Größe des Emoji-Logos */
+  }
+  footer {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+  fieldset {
+    padding: 0.8rem;
+  }
+
+  legend {
+    font-size: 1rem;
+  }
+}
+
+/* --- Formularlayout allgemein --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Abstand zwischen den Elementen */
+  max-width: 500px;
+  margin: 0 auto;
+}
+fieldset {
+  border: 2px solid #007bff; /* sichtbarer Rahmen */
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+legend {
+  float: none; /* entfernt Bootstrap-Styling */
+  width: auto; /* normale Breite */
+  font-weight: bold;
+  color: #003f88;
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+#adresse-feld {
+  display: flex;
+  flex-direction: column; /* Stapelt Label und Input vertikal */
+}
+
+#adresse-feld input {
+  display: flex;
+  width: 50%; /* <-- DEIN WUNSCH: Jedes Input-Feld ist 50% breit */
+}
+
+/* Submit designen */
+#submit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#submit:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+#submit:active {
+  background-color: #003f88;
+  transform: scale(0.75); /* Er wird leicht kleiner */
+}
