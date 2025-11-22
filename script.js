@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const kleidungOptions = Array.from(kleidungSelect.options)
     .slice(1) // erste Option ("Bitte wählen") überspringen
     .sort((a, b) => a.text.localeCompare(b.text));
-
   kleidungOptions.forEach((option) => kleidungSelect.appendChild(option));
 
   // Krisengebiet alphabetisch sortieren
@@ -31,10 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const krisenOptions = Array.from(krisengebietSelect.options)
     .slice(1)
     .sort((a, b) => a.text.localeCompare(b.text));
-
   krisenOptions.forEach((option) => krisengebietSelect.appendChild(option));
 
-// PLZ-Prüfung beim Formular-Absenden
+  // PLZ-Prüfung beim Formular-Absenden
   const form = document.querySelector("form");
   const plzInput = document.getElementById("plz");
   const geschaeftsstellePLZ = "73";
