@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const kleidungSelect = document.getElementById("kleidung");
   const kleidungOptions = Array.from(kleidungSelect.options)
     .slice(1) // erste Option ("Bitte wählen") überspringen
-    .sort((a, b) => a.text.localeCompare(b.text));
+    .sort((a, b) => a.text.localeCompare(b.text, "de", { sensitivity: "base" }));
   kleidungOptions.forEach((option) => kleidungSelect.appendChild(option));
 
   // Krisengebiet alphabetisch sortieren
   const krisengebietSelect = document.getElementById("krisengebiet");
   const krisenOptions = Array.from(krisengebietSelect.options)
     .slice(1)
-    .sort((a, b) => a.text.localeCompare(b.text));
+    .sort((a, b) => a.text.localeCompare(b.text, "de", { sensitivity: "base" }));
   krisenOptions.forEach((option) => krisengebietSelect.appendChild(option));
 
   // PLZ-Prüfung beim Formular-Absenden
